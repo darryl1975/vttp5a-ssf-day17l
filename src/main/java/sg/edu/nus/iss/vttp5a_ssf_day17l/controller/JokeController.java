@@ -9,16 +9,12 @@ import org.springframework.ui.Model;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import sg.edu.nus.iss.vttp5a_ssf_day17l.model.Joke;
 import sg.edu.nus.iss.vttp5a_ssf_day17l.repository.ListRepo;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-
-
 
 @Controller
 @RequestMapping(path = {"/jokes"})
@@ -63,8 +59,4 @@ public class JokeController {
 
         return "jokelist";
     }
-    
-    
-
-
 }

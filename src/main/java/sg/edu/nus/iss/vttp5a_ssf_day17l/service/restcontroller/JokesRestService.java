@@ -11,7 +11,6 @@ import org.springframework.web.client.RestTemplate;
 import jakarta.json.Json;
 import jakarta.json.JsonArray;
 import jakarta.json.JsonReader;
-import jakarta.json.JsonReaderFactory;
 import sg.edu.nus.iss.vttp5a_ssf_day17l.constant.Url;
 import sg.edu.nus.iss.vttp5a_ssf_day17l.model.Joke;
 
