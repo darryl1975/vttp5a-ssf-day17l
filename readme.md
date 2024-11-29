@@ -14,4 +14,12 @@
    
 7. docker system prune (clear docker built cache) <br>
    
-8. docker run -d -p 8090:3000 darryl1975/vttp5a-day17l:0.0.1
+8. docker run -d -p 8090:3000 darryl1975/vttp5a-day17l:0.0.1 <br>
+   
+### railway command <br>
+
+1. railway login --browserless <br>
+   
+2. railway link <br>
+   
+3. railway up <br>
