@@ -80,4 +80,11 @@ public class Person {
     public void setDob(Date dob) {
         this.dob = dob;
     }
+
+    @Override
+    public String toString() {
+        return "Person [id=" + id + ", fullName=" + fullName + ", email=" + email + ", phone=" + phone + ", dob=" + dob
+                + "]";
+    }
+    
 }
