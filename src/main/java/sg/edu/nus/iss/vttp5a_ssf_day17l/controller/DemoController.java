@@ -7,15 +7,18 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Map.Entry;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import jakarta.json.Json;
 import jakarta.json.JsonObject;
@@ -133,4 +136,32 @@ public class DemoController {
         return retrievedPersonList;
     }
 
+    @GetMapping("/health")
+    public ModelAndView getHealth() {   
+        ModelAndView mav = new ModelAndView();
+
+        try {
+
+            // call checkHealth
+            checkHealth();
+
+            mav.setViewName("healthy");
+            mav.setStatus(HttpStatusCode.valueOf(200));
+        } catch(Exception ex) {
+
+            mav.setViewName("unhealthy");
+            mav.setStatus(HttpStatusCode.valueOf(500));
+        }
+
+        return mav;
+    }
+
+    private void checkHealth() throws Exception {
+        Random random = new Random();
+        Integer randomValue = random.nextInt(0, 10);
+
+        if (randomValue <= 5) {
+            throw new Exception();
+        }
+    }
 }

@@ -28,9 +28,10 @@ ARG DEPLOY_DIR=/app
 WORKDIR ${DEPLOY_DIR}
 
 COPY --from=compiler /code_folder/target/vttp5a-ssf-day17l-0.0.1-SNAPSHOT.jar vttp5a-day17l.jar
-
 ENV SERVER_PORT=3000
 
 EXPOSE ${SERVER_PORT}
+
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD curl -s -f http://localhost:3000/demo/health || exit 1
 
 ENTRYPOINT ["java", "-jar", "vttp5a-day17l.jar"]
