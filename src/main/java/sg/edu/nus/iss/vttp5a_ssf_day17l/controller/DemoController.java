@@ -28,7 +28,6 @@ import sg.edu.nus.iss.vttp5a_ssf_day17l.constant.Constant;
 import sg.edu.nus.iss.vttp5a_ssf_day17l.model.Person;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/demo")

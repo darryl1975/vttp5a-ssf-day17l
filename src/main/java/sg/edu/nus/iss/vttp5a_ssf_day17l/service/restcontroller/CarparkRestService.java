@@ -10,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 import jakarta.json.Json;
 import jakarta.json.JsonArray;
 import jakarta.json.JsonObject;
-import jakarta.json.JsonObjectBuilder;
 import jakarta.json.JsonReader;
 import sg.edu.nus.iss.vttp5a_ssf_day17l.constant.Url;
 import sg.edu.nus.iss.vttp5a_ssf_day17l.model.Carpark;

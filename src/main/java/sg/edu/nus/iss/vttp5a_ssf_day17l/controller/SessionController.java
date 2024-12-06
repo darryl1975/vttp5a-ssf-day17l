@@ -24,6 +24,7 @@ public class SessionController {
         return "home";
     }
     
+    @SuppressWarnings("unchecked")
     @GetMapping("/list")
     public String showSessions(HttpSession httpSession, Model model) {
 
@@ -45,6 +46,7 @@ public class SessionController {
         return "sessioncreate";
     }
 
+    @SuppressWarnings("unchecked")
     @PostMapping("")
     public String postSessionCreate(@ModelAttribute("session") SessionData entity, HttpSession httpSession, Model model) {
 
